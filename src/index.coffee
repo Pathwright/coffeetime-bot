@@ -15,10 +15,10 @@ sayCoffeeTime = ->
   isInRange = utils.isInRange(hr)
   emoji = ai.getEmoji(hr)
   quote = ai.getQuote(hr)
-  next = not isInRange
-    next = "next coffee time starts in #{}"
-  else
-    next = "ends in #{utils.getNextStartDate()}"
+  # next = if not isInRange
+  #   next = "next coffee time starts in #{}"
+  # else
+  #   next = "ends in #{utils.getNextStartDate()}"
   {emoji, quote}
 
 getChannelByID = (channels, id)->
